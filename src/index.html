@@ -77,7 +77,9 @@
         <h2
           key-lang="invoiceTitle"
           class="pb-2 mb-6 text-2xl font-bold tracking-wider uppercase"
-        ></h2>
+        >
+          ...
+        </h2>
 
         <div>
           <div class="relative inline-block mr-4">
@@ -126,6 +128,7 @@
               <input
                 class="w-48 px-4 py-2 leading-tight text-gray-700 transition-all duration-150 bg-gray-100 border-2 border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-blue-500"
                 type="text"
+                title="Invoice number"
                 placeholder="eg. #INV-100001"
                 x-model="invoiceNumber"
               />
@@ -143,6 +146,7 @@
                 class="w-48 px-4 py-2 leading-tight text-gray-700 transition-all duration-150 bg-gray-100 border-2 border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-blue-500 js-datepicker"
                 type="text"
                 id="datepicker1"
+                title="Invoice date"
                 placeholder="eg. 17 Feb, 2020"
                 x-model="invoiceDate"
                 x-on:change="invoiceDate = document.getElementById('datepicker1').value"
@@ -162,6 +166,7 @@
               <input
                 class="w-48 px-4 py-2 leading-tight text-gray-700 transition-all duration-150 bg-gray-100 border-2 border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-blue-500 js-datepicker-2"
                 id="datepicker2"
+                title="Invoice due date"
                 type="text"
                 placeholder="eg. 17 Mar, 2020"
                 x-model="invoiceDueDate"
@@ -178,6 +183,7 @@
           >
             <img
               id="image"
+              alt="Placeholder logo image invoice"
               class="object-cover w-full h-32"
               src="https://placehold.co/300x300/e2e8f0/e2e8f0"
             />
@@ -188,6 +194,7 @@
             >
               <button
                 type="button"
+                title="Add logo image"
                 style="background-color: rgba(255, 255, 255, 0.65);"
                 class="px-4 py-2 text-sm font-semibold text-gray-700 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:shadow-outline hover:bg-gray-100"
               >
@@ -204,6 +211,7 @@
           <input
             name="photo"
             id="fileInput"
+            title="Add logo image"
             accept="image/*"
             class="hidden"
             type="file"
@@ -231,18 +239,21 @@
           <input
             class="w-full px-4 py-2 mb-1 leading-tight text-gray-700 transition duration-150 bg-gray-100 border-2 border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-blue-500"
             key-lang="invoiceBillCompanyName"
+            title="Bill company name"
             type="text"
             x-model="billing.name"
           />
           <input
             class="w-full px-4 py-2 mb-1 leading-tight text-gray-700 transition duration-150 bg-gray-100 border-2 border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-blue-500"
             key-lang="invoiceBillCompanyAddress"
+            title="Bill company address"
             type="text"
             x-model="billing.address"
           />
           <input
             class="w-full px-4 py-2 mb-1 leading-tight text-gray-700 transition duration-150 bg-gray-100 border-2 border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-blue-500"
             key-lang="invoiceAdditionalInfo"
+            title="Aditional information"
             type="text"
             x-model="billing.extra"
           />
@@ -255,6 +266,7 @@
           <input
             class="w-full px-4 py-2 mb-1 leading-tight text-gray-700 transition duration-150 bg-gray-100 border-2 border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-blue-500"
             key-lang="invoiceFromCompanyName"
+            title="From company name"
             type="text"
             x-model="from.name"
           />
@@ -262,6 +274,7 @@
           <input
             class="w-full px-4 py-2 mb-1 leading-tight text-gray-700 transition duration-150 bg-gray-100 border-2 border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-blue-500"
             key-lang="invoiceFromCompanyAddress"
+            title="From company address"
             type="text"
             x-model="from.address"
           />
@@ -269,6 +282,7 @@
           <input
             class="w-full px-4 py-2 mb-1 leading-tight text-gray-700 transition duration-150 bg-gray-100 border-2 border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-blue-500"
             key-lang="invoiceAdditionalInfo"
+            title="Aditional information"
             type="text"
             x-model="from.extra"
           />
@@ -352,6 +366,7 @@
 
       <button
         key-lang="invoiceAddButton"
+        title="Add item"
         class="px-4 py-2 mt-6 text-sm font-semibold text-gray-700 bg-white border border-gray-300 rounded shadow-sm focus:outline-none focus:shadow-outline hover:bg-gray-100"
         x-on:click="openModal = !openModal"
       ></button>
@@ -428,7 +443,9 @@
             <h2
               key-lang="invoiceTitle"
               class="pb-2 mb-6 text-3xl font-bold tracking-wider uppercase"
-            ></h2>
+            >
+              ...
+            </h2>
 
             <div class="flex items-center mb-1">
               <label
@@ -459,7 +476,11 @@
           </div>
           <div class="pr-5">
             <div class="w-32 h-32 mb-1 overflow-hidden">
-              <img id="image2" class="object-cover w-20 h-20" />
+              <img
+                id="image2"
+                class="object-cover w-20 h-20"
+                alt="Invoice logo"
+              />
             </div>
           </div>
         </div>
@@ -608,7 +629,9 @@
             <h2
               key-lang="invoiceModalTitle"
               class="pb-2 mb-6 text-2xl font-bold text-gray-800 border-b"
-            ></h2>
+            >
+              ...
+            </h2>
 
             <div class="mb-4">
               <label
@@ -616,6 +639,7 @@
                 class="block mb-1 text-sm font-bold tracking-wide text-gray-800 uppercase"
               ></label>
               <input
+                title="Description"
                 class="w-full px-4 py-2 mb-1 leading-tight text-gray-700 transition duration-150 bg-gray-100 border-2 border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-blue-500"
                 type="text"
                 x-model="item.name"
@@ -629,6 +653,7 @@
                   class="block mb-1 text-sm font-bold tracking-wide text-gray-800 uppercase"
                 ></label>
                 <input
+                  title="Units"
                   class="w-full px-4 py-2 mb-1 leading-tight text-right text-gray-700 bg-gray-200 border-2 border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-blue-500"
                   type="text"
                   x-model="item.qty"
@@ -641,6 +666,7 @@
                   class="block mb-1 text-sm font-bold tracking-wide text-gray-800 uppercase"
                 ></label>
                 <input
+                  title="Unit price"
                   class="w-full px-4 py-2 mb-1 leading-tight text-right text-gray-700 bg-gray-200 border-2 border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-blue-500"
                   type="text"
                   x-model="item.rate"
@@ -653,6 +679,7 @@
                   class="block mb-1 text-sm font-bold tracking-wide text-gray-800 uppercase"
                 ></label>
                 <input
+                  title="Ammount"
                   class="w-full px-4 py-2 mb-1 leading-tight text-right text-gray-700 bg-gray-200 border-2 border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-blue-500"
                   type="text"
                   x-model="item.total = item.qty * item.rate"
@@ -667,6 +694,7 @@
                   >GST</label
                 >
                 <select
+                  title="Select taxes"
                   class="block w-full px-4 py-2 pr-8 leading-tight text-gray-700 bg-gray-200 border-2 border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-blue-500"
                   x-model="item.gst"
                 >
@@ -694,12 +722,14 @@
             <div class="mt-8 text-right">
               <button
                 type="button"
+                title="Cancel item"
                 key-lang="invoiceCancelModal"
                 class="px-4 py-2 mr-2 font-semibold text-gray-700 bg-white border border-gray-300 rounded shadow-sm focus:outline-none focus:shadow-outline hover:bg-gray-100"
                 @click="openModal = !openModal"
               ></button>
               <button
                 type="button"
+                title="Add item"
                 key-lang="invoiceAddItemModal"
                 class="px-4 py-2 font-semibold text-white bg-gray-800 border border-gray-700 rounded shadow-sm focus:outline-none focus:shadow-outline hover:bg-gray-700"
                 @click="addItem()"
