@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - node
+  - lts/*
+install:
+  - npm install
+before_script:
+  - npm rebuild node-sass
+script:
+  - npm run lint:styles
+  - npm run lint:js
+  - npm run lint:html
+  - npm run build
+after_script:
+  - NOW_ALIAS=invoicegenerator node_modules/.bin/now-travis
+branches:
+  only:
+    - master
