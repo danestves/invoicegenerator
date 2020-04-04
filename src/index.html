@@ -7,6 +7,100 @@
       Invoice Generator | Made with AlpineJS and TailwindCSS
     </title>
 
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/static/apple-touch-icon.png?v=kPvy4M7Kk4"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/static/favicon-32x32.png?v=kPvy4M7Kk4"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/static/favicon-16x16.png?v=kPvy4M7Kk4"
+    />
+    <link rel="manifest" href="/static/site.webmanifest?v=kPvy4M7Kk4" />
+    <link
+      rel="mask-icon"
+      href="/static/safari-pinned-tab.svg?v=kPvy4M7Kk4"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="/static/favicon.ico?v=kPvy4M7Kk4" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta
+      name="msapplication-config"
+      content="/static/browserconfig.xml?v=kPvy4M7Kk4"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Search Engine -->
+    <meta
+      name="description"
+      content="Website made to generate invoice based on user inputs, looking to improve the way that we generate fast invoices. Made with AlpineJS, TailwindCSS and Heroicons."
+    />
+    <meta
+      name="image"
+      content="https://invoicegenerator.now.sh/static/og.jpg"
+    />
+
+    <!-- Schema.org for Google -->
+    <meta
+      itemprop="name"
+      content="Invoice Generator | Made with AlpineJS and TailwindCSS"
+    />
+    <meta
+      itemprop="description"
+      content="Website made to generate invoice based on user inputs, looking to improve the way that we generate fast invoices. Made with AlpineJS, TailwindCSS and Heroicons."
+    />
+    <meta
+      itemprop="image"
+      content="https://invoicegenerator.now.sh/static/og.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Invoice Generator | Made with AlpineJS and TailwindCSS"
+    />
+    <meta
+      name="twitter:description"
+      content="Website made to generate invoice based on user inputs, looking to improve the way that we generate fast invoices. Made with AlpineJS, TailwindCSS and Heroicons."
+    />
+    <meta name="twitter:site" content="@danestves" />
+    <meta name="twitter:creator" content="@danestves" />
+    <meta
+      name="twitter:image:src"
+      content="https://invoicegenerator.now.sh/static/og.jpg"
+    />
+
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta
+      name="og:title"
+      content="Invoice Generator | Made with AlpineJS and TailwindCSS"
+    />
+    <meta
+      name="og:description"
+      content="Website made to generate invoice based on user inputs, looking to improve the way that we generate fast invoices. Made with AlpineJS, TailwindCSS and Heroicons."
+    />
+    <meta
+      name="og:image"
+      content="https://invoicegenerator.now.sh/static/og.jpg"
+    />
+    <meta name="og:url" content="https://invoicegenerator.now.sh/" />
+    <meta
+      name="og:site_name"
+      content="Invoice Generator | Made with AlpineJS and TailwindCSS"
+    />
+    <meta name="og:locale" content="en_US" />
+    <meta name="og:type" content="website" />
+
     <!-- Contry flags -->
     <link
       rel="stylesheet"
@@ -932,7 +1026,7 @@
           numberFormat(amount) {
             return amount.toLocaleString('en-US', {
               style: 'currency',
-              currency: 'INR'
+              currency: 'USD'
             })
           },
 
