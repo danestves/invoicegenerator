@@ -46,22 +46,20 @@
             class="absolute right-0 z-50 w-48 mt-2 origin-top-right rounded-md shadow-lg"
           >
             <div class="py-1 bg-white rounded-md shadow-xs">
-              <a
+              <button
                 id="english"
-                href="#"
-                class="flex items-center px-4 py-2 text-sm text-gray-700 transition-all duration-200 hover:bg-gray-300 justify-evenly"
+                class="flex items-center w-full px-4 py-2 text-sm text-gray-700 transition-all duration-200 focus:outline-none focus:shadow-outline hover:bg-gray-300 justify-evenly"
               >
                 <span class="w-8 h-5 flag-icon flag-icon-us"></span>
                 English
-              </a>
-              <a
+              </button>
+              <button
                 id="spanish"
-                href="#"
-                class="flex items-center px-4 py-2 text-sm text-gray-700 transition-all duration-200 hover:bg-gray-300 justify-evenly"
+                class="flex items-center w-full px-4 py-2 text-sm text-gray-700 transition-all duration-200 focus:outline-none focus:shadow-outline hover:bg-gray-300 justify-evenly"
               >
                 <span class="w-8 h-5 flag-icon flag-icon-es"></span>
                 Español
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -84,7 +82,7 @@
         <div>
           <div class="relative inline-block mr-4">
             <div
-              class="inline-flex items-center justify-center w-10 h-10 text-gray-500 bg-gray-100 rounded-full cursor-pointer hover:bg-gray-300"
+              class="inline-flex items-center justify-center w-10 h-10 text-gray-500 bg-gray-100 rounded-full cursor-pointer focus:outline-none focus:shadow-outline hover:bg-gray-300"
               @click="printInvoice()"
               data-tippy-content="Print"
             >
@@ -100,7 +98,7 @@
 
           <div class="relative inline-block">
             <div
-              class="inline-flex items-center justify-center w-10 h-10 text-gray-500 transition-all duration-150 bg-gray-100 rounded-full cursor-pointer hover:bg-gray-300"
+              class="inline-flex items-center justify-center w-10 h-10 text-gray-500 transition-all duration-150 bg-gray-100 rounded-full cursor-pointer focus:outline-none focus:shadow-outline hover:bg-gray-300"
               @click="window.location.reload()"
               data-tippy-content="Refresh"
             >
@@ -126,8 +124,7 @@
             <span class="hidden inline-block mr-4 md:block">:</span>
             <div class="flex-1">
               <input
-                class="w-48 px-4 py-2 leading-tight text-gray-700 bg-gray-200 border-2 border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-blue-500"
-                id="inline-full-name"
+                class="w-48 px-4 py-2 leading-tight text-gray-700 transition-all duration-150 bg-gray-100 border-2 border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-blue-500"
                 type="text"
                 placeholder="eg. #INV-100001"
                 x-model="invoiceNumber"
@@ -143,7 +140,7 @@
             <span class="hidden inline-block mr-4 md:block">:</span>
             <div class="flex-1">
               <input
-                class="w-48 px-4 py-2 leading-tight text-gray-700 bg-gray-200 border-2 border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-blue-500 js-datepicker"
+                class="w-48 px-4 py-2 leading-tight text-gray-700 transition-all duration-150 bg-gray-100 border-2 border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-blue-500 js-datepicker"
                 type="text"
                 id="datepicker1"
                 placeholder="eg. 17 Feb, 2020"
@@ -163,7 +160,7 @@
             <span class="hidden inline-block mr-4 md:block">:</span>
             <div class="flex-1">
               <input
-                class="w-48 px-4 py-2 leading-tight text-gray-700 bg-gray-200 border-2 border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-blue-500 js-datepicker-2"
+                class="w-48 px-4 py-2 leading-tight text-gray-700 transition-all duration-150 bg-gray-100 border-2 border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-blue-500 js-datepicker-2"
                 id="datepicker2"
                 type="text"
                 placeholder="eg. 17 Mar, 2020"
@@ -192,7 +189,7 @@
               <button
                 type="button"
                 style="background-color: rgba(255, 255, 255, 0.65);"
-                class="px-4 py-2 text-sm font-semibold text-gray-700 border border-gray-300 rounded-lg shadow-sm hover:bg-gray-100"
+                class="px-4 py-2 text-sm font-semibold text-gray-700 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:shadow-outline hover:bg-gray-100"
               >
                 <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
                   <path
@@ -317,7 +314,7 @@
       </div>
 
       <template x-for="invoice in items" :key="invoice.id">
-        <div class="flex py-2 -mx-1 border-b">
+        <div class="flex py-2 -mx-1 border-b border-gray-400">
           <div class="flex-1 px-1">
             <p class="text-gray-800" x-text="invoice.name"></p>
           </div>
@@ -355,7 +352,7 @@
 
       <button
         key-lang="invoiceAddButton"
-        class="px-4 py-2 mt-6 text-sm font-semibold text-gray-700 bg-white border border-gray-300 rounded shadow-sm hover:bg-gray-100"
+        class="px-4 py-2 mt-6 text-sm font-semibold text-gray-700 bg-white border border-gray-300 rounded shadow-sm focus:outline-none focus:shadow-outline hover:bg-gray-100"
         x-on:click="openModal = !openModal"
       ></button>
 
@@ -398,24 +395,28 @@
           Created by
           <a
             class="text-blue-600 border-b-2 border-blue-200 hover:text-blue-500 hover:border-blue-300"
-            href="https://twitter.com/mithicher"
-            >@mithicher</a
+            href="https://danestves.com"
+          >
+            @danestves </a
           >. Built with
           <a
             class="text-blue-600 border-b-2 border-blue-200 hover:text-blue-500 hover:border-blue-300"
             href="https://tailwindcss.com/"
-            >tailwindCSS</a
           >
+            TailwindCSS
+          </a>
           and
           <a
             href="https://github.com/alpinejs/alpine"
             class="text-blue-600 border-b-2 border-blue-200 hover:text-blue-500 hover:border-blue-300"
-            >AlpineJS</a
+          >
+            AlpineJS </a
           >. SVG icons from
           <a
-            href="https://github.com/tabler/tabler-icons"
+            href="https://heroicons.dev/"
             class="text-blue-600 border-b-2 border-blue-200 hover:text-blue-500 hover:border-blue-300"
-            >Tabler Icons</a
+          >
+            Heroicons</a
           >.
         </p>
       </div>
@@ -424,33 +425,34 @@
       <div id="js-print-template" x-ref="printTemplate" class="hidden">
         <div class="flex justify-between mb-8">
           <div>
-            <h2 class="pb-2 mb-6 text-3xl font-bold tracking-wider uppercase">
-              Invoice
-            </h2>
+            <h2
+              key-lang="invoiceTitle"
+              class="pb-2 mb-6 text-3xl font-bold tracking-wider uppercase"
+            ></h2>
 
             <div class="flex items-center mb-1">
               <label
+                key-lang="invoiceNumber"
                 class="block w-32 text-xs font-bold tracking-wide text-gray-800 uppercase"
-                >Invoice No.</label
-              >
+              ></label>
               <span class="inline-block mr-4">:</span>
               <div x-text="invoiceNumber"></div>
             </div>
 
             <div class="flex items-center mb-1">
               <label
+                key-lang="invoiceDate"
                 class="block w-32 text-xs font-bold tracking-wide text-gray-800 uppercase"
-                >Invoice Date</label
-              >
+              ></label>
               <span class="inline-block mr-4">:</span>
               <div x-text="invoiceDate"></div>
             </div>
 
             <div class="flex items-center mb-1">
               <label
+                key-lang="invoiceDue"
                 class="block w-32 text-xs font-bold tracking-wide text-gray-800 uppercase"
-                >Due date</label
-              >
+              ></label>
               <span class="inline-block mr-4">:</span>
               <div x-text="invoiceDueDate"></div>
             </div>
@@ -465,9 +467,9 @@
         <div class="flex justify-between mb-10">
           <div class="w-1/2">
             <label
+              key-lang="invoiceBill"
               class="block mb-2 text-xs font-bold tracking-wide text-gray-800 uppercase"
-              >Bill/Ship To:</label
-            >
+            ></label>
             <div>
               <div x-text="billing.name"></div>
               <div x-text="billing.address"></div>
@@ -476,9 +478,9 @@
           </div>
           <div class="w-1/2">
             <label
+              key-lang="invoiceFrom"
               class="block mb-2 text-xs font-bold tracking-wide text-gray-800 uppercase"
-              >From:</label
-            >
+            ></label>
             <div>
               <div x-text="from.name"></div>
               <div x-text="from.address"></div>
@@ -489,23 +491,25 @@
 
         <div class="flex flex-wrap items-start py-2 -mx-1 border-b">
           <div class="flex-1 px-1">
-            <p class="text-xs font-bold tracking-wide text-gray-600 uppercase">
-              Description
-            </p>
+            <p
+              key-lang="invoiceDescription"
+              class="text-xs font-bold tracking-wide text-gray-600 uppercase"
+            ></p>
           </div>
 
           <div class="w-32 px-1 text-right">
-            <p class="text-xs font-bold tracking-wide text-gray-600 uppercase">
-              Units
-            </p>
+            <p
+              key-lang="invoiceUnits"
+              class="text-xs font-bold tracking-wide text-gray-600 uppercase"
+            ></p>
           </div>
 
           <div class="w-32 px-1 text-right">
             <p class="leading-none">
               <span
+                key-lang="invoiceUnitPrice"
                 class="block text-xs font-bold tracking-wide text-gray-600 uppercase"
-                >Unit Price</span
-              >
+              ></span>
               <span class="text-xs font-medium text-gray-500">(Incl. GST)</span>
             </p>
           </div>
@@ -513,9 +517,9 @@
           <div class="w-32 px-1 text-right">
             <p class="leading-none">
               <span
+                key-lang="invoiceAmmount"
                 class="block text-xs font-bold tracking-wide text-gray-600 uppercase"
-                >Amount</span
-              >
+              ></span>
               <span class="text-xs font-medium text-gray-500">(Incl. GST)</span>
             </p>
           </div>
@@ -549,7 +553,7 @@
           </div>
           <div class="flex justify-between mb-4">
             <div class="flex-1 text-sm text-right text-gray-600">
-              GST(18%) incl. in Total
+              GST(18%) incl. Total
             </div>
             <div class="w-40 text-right">
               <div class="text-sm text-gray-600" x-html="totalGST"></div>
@@ -558,9 +562,10 @@
 
           <div class="py-2 border-t border-b">
             <div class="flex justify-between">
-              <div class="flex-1 text-xl text-right text-gray-600">
-                Amount due
-              </div>
+              <div
+                key-lang="invoiceAmmountDue"
+                class="flex-1 text-xl text-right text-gray-600"
+              ></div>
               <div class="w-40 text-right">
                 <div
                   class="text-xl font-bold text-gray-800"
@@ -583,7 +588,7 @@
           class="absolute relative left-0 right-0 max-w-xl p-4 mx-auto mt-24 overflow-hidden"
         >
           <div
-            class="absolute top-0 right-0 inline-flex items-center justify-center w-10 h-10 text-gray-500 bg-white rounded-full shadow cursor-pointer hover:text-gray-800"
+            class="absolute top-0 right-0 inline-flex items-center justify-center w-10 h-10 text-gray-500 bg-white rounded-full shadow cursor-pointer focus:outline-none focus:shadow-outline hover:text-gray-800"
             x-on:click="openModal = !openModal"
           >
             <svg
@@ -612,7 +617,6 @@
               ></label>
               <input
                 class="w-full px-4 py-2 mb-1 leading-tight text-gray-700 transition duration-150 bg-gray-100 border-2 border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-blue-500"
-                id="inline-full-name"
                 type="text"
                 x-model="item.name"
               />
@@ -626,7 +630,6 @@
                 ></label>
                 <input
                   class="w-full px-4 py-2 mb-1 leading-tight text-right text-gray-700 bg-gray-200 border-2 border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-blue-500"
-                  id="inline-full-name"
                   type="text"
                   x-model="item.qty"
                 />
@@ -639,7 +642,6 @@
                 ></label>
                 <input
                   class="w-full px-4 py-2 mb-1 leading-tight text-right text-gray-700 bg-gray-200 border-2 border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-blue-500"
-                  id="inline-full-name"
                   type="text"
                   x-model="item.rate"
                 />
@@ -652,7 +654,6 @@
                 ></label>
                 <input
                   class="w-full px-4 py-2 mb-1 leading-tight text-right text-gray-700 bg-gray-200 border-2 border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-blue-500"
-                  id="inline-full-name"
                   type="text"
                   x-model="item.total = item.qty * item.rate"
                 />
@@ -694,13 +695,13 @@
               <button
                 type="button"
                 key-lang="invoiceCancelModal"
-                class="px-4 py-2 mr-2 font-semibold text-gray-700 bg-white border border-gray-300 rounded shadow-sm hover:bg-gray-100"
+                class="px-4 py-2 mr-2 font-semibold text-gray-700 bg-white border border-gray-300 rounded shadow-sm focus:outline-none focus:shadow-outline hover:bg-gray-100"
                 @click="openModal = !openModal"
               ></button>
               <button
                 type="button"
                 key-lang="invoiceAddItemModal"
-                class="px-4 py-2 font-semibold text-white bg-gray-800 border border-gray-700 rounded shadow-sm hover:bg-gray-700"
+                class="px-4 py-2 font-semibold text-white bg-gray-800 border border-gray-700 rounded shadow-sm focus:outline-none focus:shadow-outline hover:bg-gray-700"
                 @click="addItem()"
               ></button>
             </div>

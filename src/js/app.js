@@ -78,45 +78,20 @@ i18next.use(LanguageDetector).init(
   },
   function (err, t) {
     // HTML elements
-    document.querySelector('[key-lang="invoiceTitle"]').innerHTML = t(
-      'invoiceTitle'
-    )
-    document.querySelector('[key-lang="invoiceNumber"]').innerHTML = t(
-      'invoiceNumber'
-    )
-    document.querySelector('[key-lang="invoiceDate"]').innerHTML = t(
-      'invoiceDate'
-    )
-    document.querySelector('[key-lang="invoiceDue"]').innerHTML = t(
-      'invoiceDue'
-    )
-    document.querySelector('[key-lang="invoiceBill"]').innerHTML = t(
-      'invoiceBill'
-    )
     document
       .querySelector('[key-lang="invoiceBillCompanyName"]')
       .setAttribute('placeholder', t('invoiceBillCompanyName'))
     document
       .querySelector('[key-lang="invoiceBillCompanyAddress"]')
       .setAttribute('placeholder', t('invoiceBillCompanyAddress'))
-    document.querySelector('[key-lang="invoiceFrom"]').innerHTML = t(
-      'invoiceFrom'
-    )
     document
       .querySelector('[key-lang="invoiceFromCompanyName"]')
       .setAttribute('placeholder', t('invoiceFromCompanyName'))
     document
       .querySelector('[key-lang="invoiceFromCompanyAddress"]')
       .setAttribute('placeholder', t('invoiceFromCompanyAddress'))
-    document.querySelector('[key-lang="invoiceDescription"]').innerHTML = t(
-      'invoiceDescription'
-    )
-
     document.querySelector('[key-lang="invoiceAddButton"]').innerHTML = t(
       'invoiceAddButton'
-    )
-    document.querySelector('[key-lang="invoiceAmmountDue"]').innerHTML = t(
-      'invoiceAmmountDue'
     )
     document.querySelector('[key-lang="invoiceModalTitle"]').innerHTML = t(
       'invoiceModalTitle'
@@ -129,6 +104,36 @@ i18next.use(LanguageDetector).init(
     )
 
     // HTML Elements For Loop
+    document.querySelectorAll('[key-lang="invoiceTitle"]').forEach(item => {
+      item.innerHTML = t('invoiceTitle')
+    })
+
+    document.querySelectorAll('[key-lang="invoiceNumber"]').forEach(item => {
+      item.innerHTML = t('invoiceNumber')
+    })
+
+    document.querySelectorAll('[key-lang="invoiceDate"]').forEach(item => {
+      item.innerHTML = t('invoiceDate')
+    })
+
+    document.querySelectorAll('[key-lang="invoiceDue"]').forEach(item => {
+      item.innerHTML = t('invoiceDue')
+    })
+
+    document.querySelectorAll('[key-lang="invoiceBill"]').forEach(item => {
+      item.innerHTML = t('invoiceBill')
+    })
+
+    document.querySelectorAll('[key-lang="invoiceFrom"]').forEach(item => {
+      item.innerHTML = t('invoiceFrom')
+    })
+
+    document
+      .querySelectorAll('[key-lang="invoiceDescription"]')
+      .forEach(item => {
+        item.innerHTML = t('invoiceDescription')
+      })
+
     document
       .querySelectorAll('[key-lang="invoiceAdditionalInfo"]')
       .forEach(item => {
@@ -152,6 +157,12 @@ i18next.use(LanguageDetector).init(
     document.querySelectorAll('[key-lang="invoiceAmmount"]').forEach(item => {
       item.innerHTML = t('invoiceAmmount')
     })
+
+    document
+      .querySelectorAll('[key-lang="invoiceAmmountDue"]')
+      .forEach(item => {
+        item.innerHTML = t('invoiceAmmountDue')
+      })
   }
 )
 
