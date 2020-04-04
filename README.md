@@ -12,7 +12,33 @@ This open source project is made to show my knowledge about JavaScript and Front
 
 You can see the live project [here](https://invoicegenerator.now.sh) 🚀
 
-# What we use? 🧐
+## 🚀 Quick start
+
+1.  **Install dependencies.**
+
+    ```shell
+    cd invoicegenerator/
+
+    npm i
+    ```
+
+2.  **Using commands.**
+
+    ```shell
+    npm run start:dev # Start development server
+
+    npm run start # Start production server
+
+    npm run lint:js # Linter for JavaScript
+
+    npm run lint:styles # Linter for styles
+
+    npm run lint:html # Linter for HTML includir a11y
+
+    npm run build # Build the project
+    ```
+
+## What we use? 🧐
 
 🖥 For the CSS i use [TailwindCSS](https://tailwindcss.com), i extremely recommend you to use this utility framework; it's going to help you to optimize your development time like 10x more faster
 
