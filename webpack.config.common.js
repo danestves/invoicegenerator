@@ -9,7 +9,13 @@ const generateHTMLPlugins = () =>
     dir =>
       new HTMLWebpackPlugin({
         filename: path.basename(dir), // Output
-        template: dir // Input
+        template: dir, // Input
+        minify: {
+          html5: true,
+          collapseWhitespace: true,
+          caseSensitive: true,
+          removeComments: true
+        }
       })
   )
 

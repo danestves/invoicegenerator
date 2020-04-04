@@ -8,7 +8,7 @@
     "lint:js": "./node_modules/.bin/eslint src/js/*.js",
     "lint:styles": "stylelint \"src/**/*.scss\"",
     "lint:html": "pa11y-ci ./src/**/*.html",
-    "start:dev": "webpack-dev-server --config webpack.config.dev.js",
+    "start:dev": "webpack-dev-server --config webpack.config.dev.js -d",
     "start": "webpack --config webpack.config.prod.js && http-server ./dist -o"
   },
   "repository": {

@@ -1,5 +1,4 @@
 {
-  "name": "invoicegenerator",
   "version": 2,
   "alias": "invoicegenerator",
   "rewrites": [{ "source": "/(.*)", "destination": "/" }]
