@@ -42,9 +42,9 @@ i18next.use(LanguageDetector).init(
           invoiceDescription: 'Description',
           invoiceUnits: 'Units',
           invoiceUnitPrice: 'Unit Price',
-          invoiceAmmount: 'Ammount',
+          invoiceAmount: 'Amount',
           invoiceAddButton: 'Add Invoice Items',
-          invoiceAmmountDue: 'Ammount due',
+          invoiceAmountDue: 'Amount due',
           invoiceModalTitle: 'Fill your services',
           invoiceCancelModal: 'Cancel',
           invoiceAddItemModal: 'Add Item'
@@ -66,12 +66,36 @@ i18next.use(LanguageDetector).init(
           invoiceDescription: 'Descripción',
           invoiceUnits: 'Unidades',
           invoiceUnitPrice: 'Precio por Unidad',
-          invoiceAmmount: 'Monto',
+          invoiceAmount: 'Monto',
           invoiceAddButton: 'Añadir elementos de factura',
-          invoiceAmmountDue: 'Monto adeudado',
+          invoiceAmountDue: 'Monto adeudado',
           invoiceModalTitle: 'Llena tus servicios',
           invoiceCancelModal: 'Cancelar',
           invoiceAddItemModal: 'Añadir Elemento'
+        }
+      },
+      de: {
+        translation: {
+          invoiceTitle: 'Rechnung',
+          invoiceNumber: 'Rechnungsnummer',
+          invoiceDate: 'Rechnungsdatum',
+          invoiceDue: 'Fälligkeitsdatum',
+          invoiceBill: 'Rechnung/Versand an:',
+          invoiceBillCompanyName: 'Name der Fakturierungsfirma',
+          invoiceBillCompanyAddress: 'Adresse der Fakturierungsfirma',
+          invoiceAdditionalInfo: 'Zusätzliche Informationen',
+          invoiceFrom: 'Von:',
+          invoiceFromCompanyName: 'Ihr Firmenname',
+          invoiceFromCompanyAddress: 'Ihre Firmenadresse',
+          invoiceDescription: 'Beschreibung',
+          invoiceUnits: 'Stückzahl',
+          invoiceUnitPrice: 'Stückpreis',
+          invoiceAmount: 'Betrag',
+          invoiceAddButton: 'Rechnungsposten hinzufügen',
+          invoiceAmountDue: 'Fälliger Betrag',
+          invoiceModalTitle: 'Ihre Dienstleistungen ausfüllen',
+          invoiceCancelModal: 'Abbrechen',
+          invoiceAddItemModal: 'Artikel hinzufügen'
         }
       }
     }
@@ -154,14 +178,14 @@ i18next.use(LanguageDetector).init(
       item.innerHTML = t('invoiceUnitPrice')
     })
 
-    document.querySelectorAll('[key-lang="invoiceAmmount"]').forEach(item => {
-      item.innerHTML = t('invoiceAmmount')
+    document.querySelectorAll('[key-lang="invoiceAmount"]').forEach(item => {
+      item.innerHTML = t('invoiceAmount')
     })
 
     document
-      .querySelectorAll('[key-lang="invoiceAmmountDue"]')
+      .querySelectorAll('[key-lang="invoiceAmountDue"]')
       .forEach(item => {
-        item.innerHTML = t('invoiceAmmountDue')
+        item.innerHTML = t('invoiceAmountDue')
       })
   }
 )
