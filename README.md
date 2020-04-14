@@ -1,9 +1,7 @@
 # <center>Invoice Generator ✨</center>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Build Status](https://travis-ci.org/danestves/invoicegenerator.png?branch=master)](https://travis-ci.org/danestves/invoicegenerator) [![GitHub issues](https://img.shields.io/github/issues/danestves/invoicegenerator)](https://github.com/danestves/invoicegenerator/issues) [![GitHub forks](https://img.shields.io/github/forks/danestves/invoicegenerator)](https://github.com/danestves/invoicegenerator/network) [![GitHub stars](https://img.shields.io/github/stars/danestves/invoicegenerator)](https://github.com/danestves/invoicegenerator/stargazers) [![GitHub license](https://img.shields.io/github/license/danestves/invoicegenerator)](https://github.com/danestves/invoicegenerator/blob/master/LICENSE)
@@ -60,12 +58,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://danestves.com/"><img src="https://avatars0.githubusercontent.com/u/31737273?v=4" width="100px;" alt=""/><br /><sub><b>Daniel Esteves</b></sub></a><br /><a href="https://github.com/danestves/invoicegenerator/commits?author=danestves" title="Code">💻</a></td>
+    <td align="center"><a href="https://johannschopplich.com"><img src="https://avatars2.githubusercontent.com/u/27850750?v=4" width="100px;" alt=""/><br /><sub><b>Johann Schopplich</b></sub></a><br /><a href="https://github.com/danestves/invoicegenerator/commits?author=johannschopplich" title="Code">💻</a> <a href="#translation-johannschopplich" title="Translation">🌍</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
