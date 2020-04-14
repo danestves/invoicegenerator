@@ -13,6 +13,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "johannschopplich",
+      "name": "Johann Schopplich",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/27850750?v=4",
+      "profile": "https://johannschopplich.com",
+      "contributions": [
+        "code",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
