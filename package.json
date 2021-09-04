@@ -36,7 +36,7 @@
     "file-loader": "^6.0.0",
     "glob": "^7.1.6",
     "html-webpack-plugin": "^4.0.4",
-    "http-server": "^0.12.1",
+    "http-server": "0.13.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
     "now-travis": "^1.2.0",
