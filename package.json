@@ -37,7 +37,7 @@
     "glob": "^7.1.6",
     "html-webpack-plugin": "^4.0.4",
     "http-server": "^0.12.1",
-    "mini-css-extract-plugin": "^0.9.0",
+    "mini-css-extract-plugin": "0.12.0",
     "node-sass": "^4.13.1",
     "now-travis": "^1.2.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
